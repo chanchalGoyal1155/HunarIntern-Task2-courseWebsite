@@ -1,5 +1,5 @@
 // =====================
-// 1. Course Details Toggle (yeh code sabse upar rakhiye)
+// 1. Course Details Toggle
 document.querySelectorAll('.course-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       const moreText = this.nextElementSibling;
@@ -16,7 +16,7 @@ document.querySelectorAll('.course-btn').forEach(function(btn) {
   });
   
   // =====================
-  // 2. Registration form validation (yeh code jaisa hai waise hi rehne dijiye)
+  // 2. Registration form validation
   const regForm = document.querySelector('.registration-section form');
 if (regForm) {
   regForm.addEventListener('submit', function(e) {
@@ -30,7 +30,7 @@ if (regForm) {
       return;
     }
     regForm.reset();
-    window.location.href = "registration-success.html"; // <-- YEH LINE
+    window.location.href = "registration-success.html";
   });
 }
   

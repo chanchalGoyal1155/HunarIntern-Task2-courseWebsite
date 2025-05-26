@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Fonts for Modern Look -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
+
   <style>
     body {
       min-height: 100vh;
@@ -19,6 +20,7 @@
       overflow: hidden;
       position: relative;
     }
+
     /* Animated Pastel Blobs */
     .blob {
       position: absolute;
@@ -49,6 +51,7 @@
       50% { transform: scale(1.1) translateY(30px) translateX(35px);}
       100% { transform: scale(1) translateY(0) translateX(0);}
     }
+
     /* Glass Card with Gradient Border */
     .glass-card {
       position: relative;
@@ -78,6 +81,7 @@
     .glass-card:hover::before {
       filter: blur(5px);
     }
+
     /* Confetti Animation */
     .confetti {
       position: absolute;
@@ -85,6 +89,7 @@
       top: 0; left: 0; width: 100vw; height: 100vh;
       pointer-events: none;
     }
+
     /* Thank You Heading */
     .thankyou-message {
       font-size: 3.2rem;
@@ -204,8 +209,10 @@
   <div class="footer-text">
     Made with ❤️ for Final Year Project &mdash; All the best for your bright future!
   </div>
+
   <!-- Confetti JS -->
   <script>
+    
   // Simple pastel confetti
   const canvas = document.getElementById("confetti");
   const ctx = canvas.getContext("2d");

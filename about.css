@@ -15,6 +15,7 @@ body {
   background: var(--primary-light);
   overflow-x: hidden;
 }
+
 .about-bg-anim {
   position: fixed;
   inset: 0;
@@ -37,6 +38,7 @@ body {
   min-height: 100vh;
   padding: 30px 0;
 }
+
 .about-card {
   background: var(--card-bg);
   border-radius: 22px;
@@ -49,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -59,14 +62,17 @@ body {
     transform: translateY(0);
   }
 }
+
 .emoji-header,
 .emoji-footer {
   text-align: center;
   margin-bottom: 18px;
 }
+
 .emoji-footer {
   margin-top: 24px;
 }
+
 .emoji {
   font-size: 2.2rem;
   margin: 0 7px;
@@ -74,11 +80,13 @@ body {
   vertical-align: middle;
   transition: transform 0.2s;
 }
+
 .emoji.inline {
   font-size: 1.3em;
   margin: 0 2px;
   vertical-align: -0.2em;
 }
+
 h1 {
   text-align: center;
   font-size: 2.3rem;
@@ -87,26 +95,31 @@ h1 {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
 .about-desc {
   font-size: 1.13rem;
   color: var(--text-dark);
   line-height: 1.7;
   margin-bottom: 0;
 }
+
 .about-desc ul {
   padding-left: 22px;
   margin: 10px 0;
 }
+
 .about-desc ul li {
   font-size: 1.03rem;
   margin-bottom: 7px;
   list-style: disc;
 }
+
 a {
   color: var(--primary);
   text-decoration: underline;
   transition: color 0.2s;
 }
+
 a:hover {
   color: #b96b2b;
 }
@@ -119,6 +132,7 @@ a:hover {
   margin-bottom: 0;
   width: 100%;
 }
+
 .back-home-btn {
   display: inline-block;
   padding: 12px 28px;
@@ -136,6 +150,7 @@ a:hover {
   position: relative;
   text-align: center;
 }
+
 .back-home-btn:hover,
 .back-home-btn:focus {
   background: #b96b2b;
@@ -241,6 +256,7 @@ a:hover {
     padding: 11px 0;
   }
 }
+
 #confetti {
   position: fixed;
   inset: 0;
