@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Thank You!</title>
+  <title>Registration Successful!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts for Modern Look -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
   <style>
     body {
@@ -15,49 +14,48 @@
       align-items: center;
       flex-direction: column;
       font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      background: linear-gradient(135deg, #a8edea 0%, #fbc2eb 50%, #a1c4fd 100%);
       overflow: hidden;
       position: relative;
     }
-    /* Animated Pastel Blobs */
+
     .blob {
       position: absolute;
       border-radius: 50%;
-      opacity: 0.45;
-      filter: blur(36px);
-      animation: blobMove 16s infinite alternate ease-in-out;
+      opacity: 0.38;
+      filter: blur(40px);
+      animation: blobMove 14s infinite alternate ease-in-out;
       z-index: 0;
     }
     .blob1 {
-      width: 400px; height: 400px; background: #fbc2eb;
-      top: -120px; left: -120px;
+      width: 380px; height: 380px; background: #fbc2eb;
+      top: -100px; left: -120px;
       animation-delay: 0s;
     }
     .blob2 {
-      width: 350px; height: 350px; background: #a1c4fd;
-      bottom: -90px; right: -90px;
+      width: 340px; height: 340px; background: #a1c4fd;
+      bottom: -100px; right: -100px;
       animation-delay: 2s;
     }
     .blob3 {
-      width: 320px; height: 320px; background: #cfd9df;
-      top: 60%; left: 70%;
+      width: 300px; height: 300px; background: #a8edea;
+      top: 65%; left: 72%;
       transform: translate(-50%, -50%);
-      animation-delay: 4s;
+      animation-delay: 3s;
     }
     @keyframes blobMove {
       0% { transform: scale(1) translateY(0) translateX(0);}
-      50% { transform: scale(1.1) translateY(30px) translateX(35px);}
+      50% { transform: scale(1.08) translateY(25px) translateX(30px);}
       100% { transform: scale(1) translateY(0) translateX(0);}
     }
-    /* Glass Card with Gradient Border */
     .glass-card {
       position: relative;
       z-index: 2;
-      background: rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.21);
       border-radius: 32px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 24px #a8edea55;
-      padding: 60px 54px 40px 54px;
+      backdrop-filter: blur(13px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12), 0 2px 24px #a1c4fd33;
+      padding: 56px 52px 38px 52px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -71,55 +69,66 @@
       inset: -4px;
       border-radius: 36px;
       padding: 0;
-      background: linear-gradient(110deg, #a1c4fd 0%, #fbc2eb 100%);
-      filter: blur(0px);
+      background: linear-gradient(120deg, #fbc2eb 0%, #a1c4fd 50%, #a8edea 100%);
+      filter: blur(2px);
       transition: filter 0.3s;
     }
     .glass-card:hover::before {
-      filter: blur(5px);
+      filter: blur(7px);
     }
-    /* Confetti Animation */
+
     .confetti {
       position: absolute;
       z-index: 5;
       top: 0; left: 0; width: 100vw; height: 100vh;
       pointer-events: none;
     }
-    /* Thank You Heading */
-    .thankyou-message {
-      font-size: 3.2rem;
+
+    .welcome-message {
+      font-size: 3.1rem;
       color: #7d5fff;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
       letter-spacing: .5px;
-      text-shadow: 0 2px 10px #fff5;
+      text-shadow: 0 2px 10px #fff4;
       animation: pop 1s cubic-bezier(.71,1.7,.77,1.24);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 14px;
     }
     @keyframes pop {
       0% { transform: scale(0.7); opacity: 0; }
-      60% { transform: scale(1.1); opacity: 1; }
+      60% { transform: scale(1.12); opacity: 1; }
       100% { transform: scale(1); }
     }
     .emoji {
-      font-size: 3.5rem;
-      animation: bounce 1.3s infinite alternate cubic-bezier(.61,.1,.32,1.07);
-      margin: 0 8px;
+      font-size: 3.2rem;
+      animation: float 1.7s infinite alternate cubic-bezier(.61,.1,.32,1.07);
+      margin: 0 6px;
       display: inline-block;
     }
-    @keyframes bounce {
+    @keyframes float {
       0% { transform: translateY(0);}
-      100% { transform: translateY(-15px);}
+      100% { transform: translateY(-12px);}
+    }
+    .success-icon {
+      font-size: 3.2rem;
+      margin-bottom: 12px;
+      color: #a1c4fd;
+      text-shadow: 0 2px 10px #fff8;
+      animation: spinIn 0.7s;
+    }
+    @keyframes spinIn {
+      0% { transform: scale(0.2) rotate(-290deg); opacity: 0;}
+      100% { transform: scale(1) rotate(0deg); opacity: 1;}
     }
     .subtext {
-      font-size: 1.3rem;
-      color: #444;
-      margin-top: 18px;
-      animation: fadeIn 1.4s;
+      font-size: 1.25rem;
+      color: #2a3a3a;
+      margin-top: 17px;
+      animation: fadeIn 1.3s;
       text-align: center;
       text-shadow: 0 2px 6px #fff4;
       font-weight: 500;
@@ -128,54 +137,43 @@
       from { opacity: 0;}
       to { opacity: 1;}
     }
-    .success-icon {
-      font-size: 3rem;
-      margin-bottom: 12px;
-      color: #70a1ff;
-      text-shadow: 0 2px 10px #fff8;
-      animation: spinIn 0.8s;
-    }
-    @keyframes spinIn {
-      0% { transform: scale(0.5) rotate(-190deg); opacity: 0;}
-      100% { transform: scale(1) rotate(0deg); opacity: 1;}
-    }
     .home-btn {
       margin-top: 34px;
       padding: 15px 38px;
-      background: linear-gradient(90deg,#7d5fff 40%,#70a1ff 100%);
+      background: linear-gradient(90deg,#a1c4fd 40%,#fbc2eb 100%);
       color: #fff;
       border: none;
       border-radius: 30px;
       font-size: 1.2rem;
       cursor: pointer;
-      box-shadow: 0 2px 18px rgba(112,161,255,0.16);
+      box-shadow: 0 2px 18px rgba(112,161,255,0.18);
       font-weight: 600;
       letter-spacing: 1px;
       transition: background 0.3s, transform 0.3s;
-      animation: fadeIn 2.2s;
+      animation: fadeIn 2.1s;
       outline: none;
-      border: 2px solid #fff6;
+      border: 2px solid #fff5;
     }
     .home-btn:hover {
-      background: linear-gradient(90deg,#70a1ff 40%,#7d5fff 100%);
-      transform: scale(1.07);
-      box-shadow: 0 4px 20px #a1c4fd44;
+      background: linear-gradient(90deg,#fbc2eb 40%,#a1c4fd 100%);
+      transform: scale(1.08);
+      box-shadow: 0 4px 20px #a1c4fd55;
     }
     .footer-text {
-      margin-top: 50px;
-      font-size: 1rem;
-      color: #888;
+      margin-top: 52px;
+      font-size: 1.02rem;
+      color: #7d5fff;
       text-align: center;
       letter-spacing: .2px;
       z-index: 2;
     }
     @media (max-width: 600px) {
       .glass-card { padding: 28px 8px 16px 8px;}
-      .thankyou-message { font-size: 1.5rem;}
-      .emoji { font-size: 1.6rem;}
+      .welcome-message { font-size: 1.6rem;}
+      .emoji { font-size: 1.5rem;}
       .success-icon { font-size: 2rem;}
-      .subtext { font-size: .98rem;}
-      .home-btn { padding: 10px 20px; font-size: .95rem;}
+      .subtext { font-size: .95rem;}
+      .home-btn { padding: 10px 20px; font-size: .97rem;}
     }
   </style>
 </head>
@@ -189,24 +187,24 @@
   <canvas id="confetti" class="confetti"></canvas>
 
   <div class="glass-card">
-    <div class="success-icon">✅</div>
-    <div class="thankyou-message">
-      <span class="emoji">🥳</span>
-      Thank You For Reaching Out!
-      <span class="emoji">💌</span>
+    <div class="success-icon">🎓</div>
+    <div class="welcome-message">
+      <span class="emoji">🎉</span>
+      Registration Successful!
+      <span class="emoji">🥰</span>
     </div>
     <div class="subtext">
-      We've received your message and will get back to you soon.<br>
-      <span style="font-size:1.3rem;">Enjoy your day! <span class="emoji">🌈</span></span>
+      Welcome to our learning family.<br>
+      We can't wait to see your success! <span class="emoji">🚀</span>
     </div>
-    <button class="home-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="home-btn" onclick="window.location.href='index.html'">Go to Home</button>
   </div>
   <div class="footer-text">
-    Made with ❤️ for Final Year Project &mdash; All the best for your bright future!
+    You are ready to start your journey. <span style="font-size:1.2rem;">🌟</span><br>
+    All the best!
   </div>
-  <!-- Confetti JS -->
   <script>
-  // Simple pastel confetti
+  // Confetti: Pastel circles/stars
   const canvas = document.getElementById("confetti");
   const ctx = canvas.getContext("2d");
   let confetti = [];
@@ -218,41 +216,68 @@
   resizeCanvas();
   function randomColor() {
     const pastel = [
-      "#fbc2eb", "#a1c4fd", "#cfd9df", "#fff6b7", "#fda085", "#b5ead7", "#ffdac1"
+      "#a1c4fd", "#fbc2eb", "#a8edea", "#fed6e3", "#cfd9df"
     ];
     return pastel[Math.floor(Math.random()*pastel.length)];
+  }
+  function drawStar(x, y, r, color, angle) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.moveTo(0, -r);
+    for (let i = 0; i < 5; i++) {
+      ctx.rotate(Math.PI / 5);
+      ctx.lineTo(0, -r * 0.5);
+      ctx.rotate(Math.PI / 5);
+      ctx.lineTo(0, -r);
+    }
+    ctx.closePath();
+    ctx.fillStyle = color;
+    ctx.globalAlpha = 0.7;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.restore();
   }
   function ConfettiParticle() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * -canvas.height;
-    this.r = 6 + Math.random() * 8;
-    this.d = Math.random() * 90;
+    this.r = 7 + Math.random() * 7;
+    this.d = Math.random() * 80;
     this.color = randomColor();
     this.tilt = Math.random() * 10 - 10;
-    this.speed = 1.9 + Math.random() * 2.2;
+    this.speed = 2 + Math.random() * 2.4;
     this.angle = Math.random() * Math.PI * 2;
+    this.type = Math.random() > 0.5 ? "star" : "circle";
+    this.rotate = Math.random() * Math.PI * 2;
     this.update = function() {
       this.y += this.speed;
-      this.tilt = Math.sin(this.angle += 0.03) * 12;
-      if (this.y > canvas.height + 10) {
+      this.tilt = Math.sin(this.angle += 0.025) * 10;
+      this.rotate += 0.04;
+      if (this.y > canvas.height + 14) {
         this.x = Math.random() * canvas.width;
-        this.y = Math.random() * -20;
+        this.y = Math.random() * -25;
         this.tilt = Math.random() * 10 - 10;
         this.color = randomColor();
+        this.type = Math.random() > 0.5 ? "star" : "circle";
       }
     }
     this.draw = function() {
-      ctx.beginPath();
-      ctx.ellipse(this.x, this.y, this.r, this.r/2, this.tilt, 0, Math.PI*2);
-      ctx.fillStyle = this.color;
-      ctx.globalAlpha = 0.74;
-      ctx.fill();
-      ctx.globalAlpha = 1;
+      if (this.type === "star") {
+        drawStar(this.x, this.y, this.r, this.color, this.rotate);
+      } else {
+        ctx.beginPath();
+        ctx.ellipse(this.x, this.y, this.r, this.r/2, this.tilt, 0, Math.PI*2);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = 0.7;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      }
     }
   }
   function createConfetti() {
     confetti = [];
-    for(let i=0; i<48; i++) {
+    for(let i=0; i<50; i++) {
       confetti.push(new ConfettiParticle());
     }
   }
@@ -267,5 +292,6 @@
   createConfetti();
   animateConfetti();
   </script>
+  
 </body>
 </html>
