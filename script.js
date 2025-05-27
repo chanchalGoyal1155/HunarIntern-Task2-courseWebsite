@@ -35,7 +35,7 @@ if (regForm) {
 }
   
   // =====================
-  // 3. Contact form validation (yeh code bhi waise hi rehne dijiye)
+  // 3. Contact form validation 
   const contactForm = document.querySelector('.contact-section form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
@@ -53,30 +53,6 @@ if (contactForm) {
 }
 
 
-// =====================
-// 4. Dark/Light Theme Toggle (sun/moon button logic)
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-
-if (themeToggle && themeIcon) {
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeIcon.textContent = '☀️';
-  } else {
-    themeIcon.textContent = '🌙';
-  }
-
-  themeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-      themeIcon.textContent = '☀️';
-    } else {
-      localStorage.setItem('theme', 'light');
-      themeIcon.textContent = '🌙';
-    }
-  });
-}
 
 // =====================
 // FAQ Accordion
